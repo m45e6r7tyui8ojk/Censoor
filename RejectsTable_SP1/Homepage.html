@@ -3,8 +3,29 @@
     <head>
         <meta charset="UTF-8" />
         <title>CSSTEST</title>
-        <link rel="stylesheet" href="csstest.css">
         <meta name="viewport" content="width=device-width">
+        
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+        <!-- Materialize CDN - CSS & JAVASCRIPT here -->
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <!-- Google Icon Font -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <!-- JavaScript/jQuery Function Initialization inside <script> </script>  -->
+        <script>
+            $(document).ready(function() {
+                $('.sidenav').sidenav();
+                $('.parallax').parallax();
+                $('.slider').slider({indicators:false, height:500, interval:2000});
+            });
+        </script>
+        
     </head>
     
     <style>
@@ -15,44 +36,104 @@
         body {
             font-family: "ArmikoOplima"
         }
-    </style>
+        #censoortitle {
+            height: 64px;
+            align-content: center
+        }
+        
+        a {
+        color: white;
+        text-decoration: none;
+        transition: 0.2s;
+        text-shadow: 0px 0px 1px blue, 0px 0px 1px red;
+        }
+
+        a:hover {
+        text-shadow: 8px 0px 1px blue, -8px 0px 1px red;
+
+        }
+        
+        i {
+            margin: 0px 10px;
+        }
+        
+        </style>
     
-    <body>
-            <img src="Censoor.png" alt="" id=censoortitle>
-            <ul id=pagetab>
-                <li><a href="Homepage.html" class="active" >Homepage</a></li>
-                <li><a href="information.html">Information</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-            </ul>
-        <hr class=headerbreak>
-        <p id=slogan>Your Data is Censoored</p>
+    <body class="black white-text">
+        <nav>
+            <div class="nav-wrapper black">
+                <a href="#" class="brand-logo left">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <img id="censoortitle" src="Censoor.png">
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="Homepage.html">Homepage</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="sidenav " id="mobile-demo">
+            <li><a href="Homepage.html">Homepage</a></li>
+            <li><a href="information.html">Information</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+        
+        <hr>
+        <h5 class="center">Your Data is Censoored</h5>
         <hr>
         
-        <h1>Immerse into a New World</h1>
-        <hr class=headerline>
+        <h1 class="center">Immerse into a New World</h1>
+        <hr>
         <!--WHATEVER THE WEBSITE IS-->
-        <section>
-            <p>
-            Censoor is the newest Virtual Reality System that will provide
-            the best gaming experience in the market. You will find the discover
-            gaming like never before thought our high-quality stereo audio,
-            massive storage, an advanced CPU, GPU, and Data Collecting Protection Software.
-            Our specially designed
-            power system will ensure that your emersion will not be broken
-            while in the system.
-            </p>
-            <a href="" id=vhs>Click for more Information</a>
-        </section>
-        <aside>
-           <img src="VRIimage.jpg" alt="">
-        </aside>
-        
-        <footer>
-            <hr class=headerbreak>
-            <img src="CensoorLogo.png" alt="" id=footerlogo>
-            <p>Copyright &copy; 2026 Censoor LLC</p>
+        <div class="row">
+            <div class="col l8 offset-l2 s12">
+                <div class="card black">
+                    <div class="card-image">
+                        <img src="VRIimage.jpg">
+                    </div>
+                    <div class="card-content">
+                        <p class="flow-text">
+                            Censoor is the newest Virtual Reality System that will provide
+                            the best gaming experience in the market. You will find the discover
+                            gaming like never before thought our high-quality stereo audio,
+                            massive storage, an advanced CPU, GPU, and Data Collecting Protection Software.
+                            Our specially designed
+                            power system will ensure that your emersion will not be broken
+                            while in the system.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer black">
+         <hr>
+          <div class="container">
+            <div class="row">
+              <div class="col l4 s12">
+                <h5 class="white-text">Discover More about Censoor</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3 valign-wrapper" href="#!">
+                  <i class="small material-icons"> info</i> Information </a></li>
+                  <li><a class="grey-text text-lighten-3 valign-wrapper" href="#!">
+                  <i class="small material-icons">question_answer</i> FAQ</a></li>
+                  <li><a class="grey-text text-lighten-3 valign-wrapper" href="#!">
+                  <i class="small material-icons">people</i>About Us</a></li>
+                  <li><a class="grey-text text-lighten-3 valign-wrapper" href="#!">
+                  <i class="small material-icons">contact_mail</i> Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright ">
+            <div class="container center">
+            © Censoor LLC 2026
+            </div>
+          </div>
         </footer>
     </body>
 </html>
