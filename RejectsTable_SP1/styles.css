@@ -1,0 +1,415 @@
+/* ==========================================================================
+   Censoor Web Identity - Base Styles & Extended Information Layout
+   Colors: Solid Black (#000000), Censoor Blue (RGB: 36, 100, 180), Censoor Red (RGB: 208, 14, 14)
+   ========================================================================== */
+
+/* Base Styles from Team Specification */
+body {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border: 1px solid white;
+    font-size: 150%;
+    margin: 0 auto;
+    max-width: 1400px;
+    box-sizing: border-box;
+}
+
+#censoortitle {
+    width: 20em;
+    float: left;
+}
+
+#pagetab {
+    text-align: center;
+    transform: translate(0px, 30px);
+    margin: 0;
+    padding: 0;
+}
+
+#pagetab li {
+    display: inline;
+    margin: 0px 1em;
+}
+
+.headerbreak {
+    clear: both;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 1.5em 0;
+}
+
+/* Hyperlinks & Hover Effects with Blue/Red Chromatic Shadows */
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    text-shadow:
+        0px 0px 1px rgb(36, 100, 180),
+        0px 0px 1px rgb(208, 14, 14);
+}
+
+a:hover {
+    text-shadow:
+        8px 0px 2px rgb(36, 100, 180),
+        -8px 0px 2px rgb(208, 14, 14);
+}
+
+/* Active Navigation Link Indication */
+#pagetab li a.active {
+    border-bottom: 2px solid rgb(208, 14, 14);
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow:
+        3px 0px 2px rgb(36, 100, 180),
+        -3px 0px 2px rgb(208, 14, 14);
+}
+
+#contactuslink {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#footerlogo {
+    width: 4em;
+    filter: drop-shadow(2px 0px 0px rgb(36, 100, 180)) drop-shadow(-2px 0px 0px rgb(208, 14, 14));
+    float: right;
+}
+
+/* Legacy Layout Support */
+section {
+    float: left;
+    width: 100%;
+}
+
+aside {
+    padding: 1em;
+    float: right;
+}
+
+/* ==========================================================================
+   Modern Extended Styles - Information Page Component Architecture
+   ========================================================================== */
+
+main {
+    clear: both;
+    padding-top: 10px;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgb(36, 100, 180) 0%, rgb(208, 14, 14) 100%);
+    margin: 2.5em 0;
+    clear: both;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hero-content {
+    flex: 1 1 550px;
+}
+
+.hero-content h1 {
+    font-size: 1.8em;
+    margin-top: 0;
+    letter-spacing: 1px;
+    color: #ffffff;
+    border-left: 4px solid rgb(208, 14, 14);
+    padding-left: 15px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: rgb(36, 100, 180);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.intro-p {
+    line-height: 1.6;
+    font-size: 0.9em;
+}
+
+/* Text and Aside Two-Column Layout */
+.text-and-aside {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.primary-text {
+    flex: 2 1 500px;
+    line-height: 1.6;
+    font-size: 0.9em;
+}
+
+.info-sidebar {
+    flex: 1 1 280px;
+    background-color: #080808;
+    border: 1px solid rgb(36, 100, 180);
+    padding: 15px;
+    box-sizing: border-box;
+    float: none; /* Reset legacy float for flex child */
+}
+
+.info-sidebar h3 {
+    margin-top: 0;
+    font-size: 1em;
+    color: rgb(208, 14, 14);
+    border-bottom: 1px solid rgb(36, 100, 180);
+    padding-bottom: 5px;
+}
+
+.info-sidebar ul {
+    padding-left: 20px;
+    font-size: 0.75em;
+    line-height: 1.5;
+}
+
+/* Technical 10-Component Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tech-card {
+    background-color: #050505;
+    border: 1px solid #333;
+    border-left: 3px solid rgb(36, 100, 180);
+    padding: 15px;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.tech-card:hover {
+    border-color: rgb(208, 14, 14);
+    transform: translateY(-2px);
+}
+
+.tech-card h3 {
+    font-size: 0.95em;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.tech-card p {
+    font-size: 0.75em;
+    line-height: 1.5;
+    color: #ccc;
+    margin: 0;
+}
+
+/* Visual Placeholders (Images & Videos) */
+.hero-media {
+    flex: 1 1 400px;
+}
+
+.media-placeholder {
+    margin-top: 10px;
+}
+
+.ph-box {
+    background-color: #111;
+    border: 2px dashed rgb(36, 100, 180);
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.ph-box-small {
+    background-color: #111;
+    border: 1px dashed rgb(208, 14, 14);
+    padding: 15px;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.ph-label {
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.85em;
+}
+
+.ph-sub {
+    font-size: 0.65em;
+    color: #888;
+}
+
+.caption {
+    font-size: 0.65em;
+    color: #aaa;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+.video-container-placeholder {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.ph-video-box {
+    background-color: #0a0a0a;
+    border: 2px solid rgb(208, 14, 14);
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.play-icon {
+    font-size: 2em;
+    color: rgb(36, 100, 180);
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Narrative Box */
+.narrative-box {
+    background-color: #050505;
+    border: 1px solid #222;
+    padding: 20px;
+    border-right: 4px solid rgb(36, 100, 180);
+    line-height: 1.6;
+    font-size: 0.88em;
+}
+
+/* Privacy Section Styling */
+.privacy-focus {
+    clear: both;
+}
+
+.privacy-banner {
+    background: linear-gradient(135deg, rgba(208, 14, 14, 0.15) 0%, rgba(36, 100, 180, 0.15) 100%);
+    border: 1px solid rgb(208, 14, 14);
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.privacy-banner h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: rgb(208, 14, 14);
+}
+
+.privacy-banner p {
+    margin: 0;
+    font-size: 0.85em;
+}
+
+/* Key Features Cards */
+.feature-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.f-card {
+    background-color: #0c0c0c;
+    border: 1px solid #222;
+    padding: 12px;
+    text-align: center;
+}
+
+.f-card h4 {
+    margin: 0 0 6px 0;
+    font-size: 0.85em;
+    color: rgb(36, 100, 180);
+}
+
+.f-card p {
+    margin: 0;
+    font-size: 0.7em;
+    color: #bbb;
+}
+
+/* Citation & Reference Links Section */
+.references-section {
+    clear: both;
+    background-color: #080808;
+    border: 1px solid #222;
+    padding: 15px 20px;
+    margin-top: 20px;
+}
+
+.references-section h3 {
+    font-size: 0.9em;
+    margin-top: 0;
+    color: rgb(36, 100, 180);
+}
+
+.ref-list {
+    font-size: 0.7em;
+    line-height: 1.6;
+    padding-left: 20px;
+}
+
+.ref-list li {
+    margin-bottom: 8px;
+}
+
+.cite-link {
+    font-size: 0.8em;
+    color: rgb(36, 100, 180);
+    vertical-align: super;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 900px) {
+    #censoortitle {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto;
+        width: 16em;
+    }
+
+    #pagetab {
+        transform: none;
+        display: block;
+    }
+
+    #pagetab li {
+        display: inline-block;
+        margin: 5px 0.5em;
+    }
+
+    body {
+        font-size: 130%;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero-section,
+    .text-and-aside {
+        flex-direction: column;
+    }
+
+    .tech-grid,
+    .feature-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #footerlogo {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+}

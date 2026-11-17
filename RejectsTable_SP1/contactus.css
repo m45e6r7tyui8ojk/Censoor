@@ -1,0 +1,25 @@
+
+
+img {
+    height: 100%;
+}
+
+form {
+    text-align: center
+}
+
+input, textarea{
+    font-size: 80%
+}
+
+input[type="submit"] {
+    background-color: green;
+    width: 25%;
+    font-size: 50%
+}
+
+input[type="reset"] {
+    background-color: red;
+    width: 25%;
+    font-size: 50%
+}

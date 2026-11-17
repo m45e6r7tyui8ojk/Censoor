@@ -1,0 +1,118 @@
+body {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border: 1px solid white;
+    font-size: 150%
+}
+* { 
+    box-sizing: border-box; }
+
+.main { 
+   float: center; 
+   width: 75%; 
+   padding: 0 10px; 
+} 
+
+img { 
+ max-width: 100%;  
+} 
+
+#censoortitle {
+    width: 20em;
+    float: left;
+}
+
+#pagetab {
+    text-align: center;
+    transform: translate(0px, 30px)
+}
+
+#pagetab li {
+    display: inline;
+    margin: 0px 1em;
+}
+
+h2 {
+    text-shadow: 0px 4px 4px blue;
+}
+
+.headerbreak {
+    clear: both
+}
+
+.headerbreakblue {
+    clear: both;
+    border-color: blue
+}
+
+.headerbreakred {
+    clear: both;
+    border-color: red
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+    text-shadow: 0px 0px 1px blue, 0px 0px 1px red;
+}
+
+a:hover {
+    text-shadow: 8px 0px 1px blue, -8px 0px 1px red;
+
+}
+
+FAQfiller {
+    text-align: margin-center;
+}
+
+#footerlogo {
+    width: 4em;
+    filter: drop-shadow(2px 0px 0px blue) drop-shadow(-2px 0px 0px red);
+    float: right
+}
+
+section {
+    float: left;
+}
+
+aside {
+    padding: 1em;
+    float: right;
+}
+
+
+/* TAKEN FROM HO5*/
+/* tablet size */ 
+@media (min-width: 768px) and (max-width:1024px) { 
+.sidebar2 { 
+width: auto; 
+clear: both; 
+border-top: 2px solid black; 
+padding-top: 10px; 
+} 
+.columnWrapper {width: auto;} 
+.main {border-right: none;} 
+} 
+/* mobile phone size */ 
+@media (max-width: 767px) { 
+.columnWrapper, .main, .sidebar1, .sidebar2 { 
+float: none; 
+width: auto;   
+}  
+.main {border: none; } 
+.sidebar1, .sidebar2 { 
+border-top: 2px solid black; 
+margin-top: 25px; 
+padding-top: 10px; 
+} 
+header h1 { font-size: 1.5em; } 
+.main h2, aside h2 {font-size: 1.5em;} 
+nav {text-align: center;} 
+nav li { 
+float: none;   
+display: inline-block; 
+} 
+nav a { border: none; } 
+} 
